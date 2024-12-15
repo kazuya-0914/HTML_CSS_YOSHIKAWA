@@ -1,0 +1,28 @@
+html {
+  font-size: 100%;
+}
+#dom-code {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  transition: all 1s ease;
+}
+
+/* 教材コード */
+.sample {
+  color: red;
+  background-color: black;
+  font-size: 24px;
+}
+
+/* 天気予報 */
+#weather-html {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+}/*# sourceMappingURL=style.css.map */

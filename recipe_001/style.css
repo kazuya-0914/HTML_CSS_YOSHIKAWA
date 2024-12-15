@@ -1,0 +1,111 @@
+/* ブラウザのデフォルトフォントサイズを基準とする。ユーザーが文字サイズを変更できる */
+html{
+    font-size: 100%;
+}
+
+body{
+    /* fontは優先順位の高いものを左側から羅列、Neueが利用できない場合Arialへ、、といった感じで */
+    color: #2b2a27;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+    width: 100%;
+    /* width: 1200px;
+    height: 600px; */
+}
+
+/* 全ての写真は親要素からはみ出さない 写真の縦横比を保ったままサイズ調整可能*/
+img{
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    color: #2b2a27;
+}
+
+/* メイン写真の配置 */
+#mainvisual img{
+width: 100%;
+height: 100vh;
+/* 縦横比を保ったまま要素いっぱいに隙間なく埋めるように配置　下2つのコードはimg要素に対して適応させる */
+object-fit: cover;
+/* object-fitで調整された画像の配置位置を指定する */
+object-position: center top;
+margin-bottom: 80px
+}
+
+.article {
+    text-align: center;
+    margin-bottom: 85px;
+}
+.recipe-diary {
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 23px;
+}
+
+/* listの点を削除 */
+.sentence   {
+    list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.subvisual{
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+padding: 0px;
+margin: 0px;
+width: 100%;
+margin-bottom: 60px;
+}
+
+.item{
+flex: 1;
+}
+.item img{
+object-fit: cover;
+width: 100%;
+height: 500px;
+vertical-align: bottom;
+}
+
+.text{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.btn{
+    display: inline-block;
+    border: solid 1px #2b2a27;
+    font-size: 0.875rem;
+    padding: 21px 60px;
+    text-decoration: none;
+}
+
+#footer{
+    font-size: 0.75rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* リンクはul,liタグで記述
+SNSのリンク集という1つの意味を持ったリスト群であるため、ul.liでグルーピング
+リストタグを使用した方が検索エンジンに対してより適切に意味を伝えることができる */
+#footer .sns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+#footer .sns li{
+    margin: 0 10px;
+}
+
+/* SP用レスポンシブ　834px以下の時に適応される*/
+@media screen and (max-width: 834px){
+
+    .subvisual{
+        flex-direction: column;
+    }
+}
